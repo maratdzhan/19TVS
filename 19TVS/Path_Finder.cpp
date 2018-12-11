@@ -29,7 +29,7 @@ string Path_Finder(string Word)
 	{
 		getline(Permak, arg);
 		if (arg.find(Word) != -1)
-		{
+		{ 
 			bool f = false;
 			for (unsigned int i = 0; i < arg.length(); i++)
 			{

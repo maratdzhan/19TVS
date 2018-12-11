@@ -24,7 +24,7 @@ map<string,string> KqInColumns;
 
 void WriteKq(bool InRow)
 {
-	ofstream kqFileCommon;
+	ofstream kqFileCommon; 
 	kqFileCommon.open(ReturnMainPath("CommonResNt") + "Kq.txt");
 	
 

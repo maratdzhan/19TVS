@@ -374,7 +374,7 @@ void MatrixFilling()
 											kk = TextStrFunc("CT", tk);
 										}
 										if (resultString.find("PL") != -1)
-										{
+										{ 
 											cType = "PL";
 											kk = TextStrFunc("PL", tk);
 										}

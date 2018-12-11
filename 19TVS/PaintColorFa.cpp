@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ #include "stdafx.h"
 #include "19TVS.h"
 #include "PaintColorFa.h"
 #include "Error.h"

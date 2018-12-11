@@ -127,7 +127,7 @@ int GetSessionInfo(HWND hWnd_1)
 				if (error_matrix_permpar != 0)
 					printf("Error");
 				
-				/* 
+				/*  
 				и в начале цикла вместо St_val => 0;
 				if ((stateNumber.size() - 1) == i)
 				{

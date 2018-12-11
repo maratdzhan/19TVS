@@ -36,7 +36,7 @@ int GetParam(std::string s, int num)
 	}
 	return locNum;
 }
-
+ 
 double GetParamD(std::string s, int num)
 {
 	std::string resStr;

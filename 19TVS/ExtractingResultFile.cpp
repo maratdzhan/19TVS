@@ -43,7 +43,7 @@ void GetKeff(string keffStr, bool needThis)
 				if (((char(keffStr[pos]) >= 47) && (char(keffStr[pos]) <= 57)) || (char(keffStr[pos]) == 46))
 				{
 					localKeff += keffStr[pos];
-				}
+				} 
 			}
 		}
 		keff = stod(localKeff);

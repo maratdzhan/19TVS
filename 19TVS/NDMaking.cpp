@@ -20,7 +20,7 @@ void slRead()
 {
 	// «апускаетс€ один раз при запуске приложени€
 	string path_si = ReturnMainPath("slink");
-	string str;
+	string str; 
 	ifstream ifs(path_si);
 
 	if (ifs.is_open() != 1)

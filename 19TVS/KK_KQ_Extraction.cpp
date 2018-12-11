@@ -216,7 +216,7 @@ void KkAssigment()
 		{
 			for (int tvel = 1; tvel < MAX_SIZE_TVEL + 1; tvel++)
 			{
-				/*
+				/* 
 				int z1 = FRNumber(tvs, tvel, 0);
 				tmp = FRNumber(tvs, tvel, 1);
 				ntCore[tvs].kk[FRNumber(tvs, tvel, 3)] = kk[FRNumber(tvs, tvel, 2)];

@@ -361,7 +361,7 @@ LRESULT CALLBACK WndGraph(HWND hGraph, UINT message, WPARAM wParam, LPARAM lPara
 					str1 = wstring(s1.begin(), s1.end());
 					TextOut(hdc, -x1+5 , (-(y2)+1) , str1.data(), str1.size());
 					//
-					//// Вторая штука
+					//// Вторая штука 
 					
 					str2 = wstring(s2.begin(), s2.end());
 					TextOut(hdc, -x1+5 , -y2+9 , str2.data(), str2.size());
@@ -400,7 +400,7 @@ LRESULT CALLBACK WndGraph(HWND hGraph, UINT message, WPARAM wParam, LPARAM lPara
 	return 0;
 }
 
-
+ 
 HDC bmp_hdc;
 HWND bmp_hwnd;
 

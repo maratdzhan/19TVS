@@ -9,4 +9,4 @@ double FakeTvel(int tvs, int tvel);
 void FakeTvelDef(bool clearing);
 int ActuallyTvel(int tvs, int tvel, bool finding);
 void ClearingInitial();
-void Clearing_Temporary();
+void Clearing_Temporary(); 

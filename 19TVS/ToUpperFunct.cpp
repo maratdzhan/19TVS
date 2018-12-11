@@ -16,4 +16,4 @@ string ToUpperFunc(string ThisLine)
 		}
 	}
 	return result;
-}
+} 

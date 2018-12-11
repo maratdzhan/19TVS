@@ -31,12 +31,12 @@ BOOL StoreBitmapFile(LPCTSTR lpszFileName, HBITMAP HBM)
 	case 1:
 	case 4:
 	case 8:
-	case 32:
+	case 32: 
 		ColorSize = sizeof(RGBQUAD) * (1 << BitCount);
 		break;
 	case 16:
 	case 24:
-		ColorSize = 0;
+		ColorSize = 0; 
 		break;
 	default: 
 		ColorSize = sizeof(RGBQUAD) * (1 << BitCount);

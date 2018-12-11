@@ -7,4 +7,4 @@ std::string ReturnMainPath(std::string inputString);
 void TakeKeff(std::string value);
 void WriteKeff();
 void TakeKq(std::string state, double value);
-void WriteKq(bool inRow);
+void WriteKq(bool inRow); 

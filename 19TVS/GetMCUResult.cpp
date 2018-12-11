@@ -16,7 +16,7 @@ const int NUMBER_OF_TVELS = 312;
 double mcu_result[110][8][NUMBER_OF_TVELS+1];
 int mcu_sotv_list[NUMBER_OF_TVELS + 20]; // (19 -> GT + CT + 1)
 string path_gmr, add_path, result, tmpStr, str;
-
+ 
 string add_path_gmr = "bin/data/";
 string glpath_gmr;
 vector<double> mcu_kq_extract;

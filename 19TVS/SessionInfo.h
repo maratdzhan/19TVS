@@ -12,3 +12,4 @@ int GetParam(string s, int num);
 
 void GetTableParam(int table_num, int param, int inner_num, double value);
 double ReturnTableParam(int table_num, int param, int inner_num, double value);
+ 

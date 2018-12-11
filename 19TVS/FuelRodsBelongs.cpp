@@ -36,7 +36,7 @@ vector<double> ayc[FA_COUNT + 1];
 
 
 vector<int> verticalSync;
-vector<int> rowSt;
+vector<int> rowSt; 
 vector<int> elem_pos_10;
 vector<int> elem_pos_16;
 vector<int> row_size;

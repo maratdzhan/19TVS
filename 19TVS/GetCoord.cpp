@@ -339,7 +339,7 @@ void GetModifierCoefficient(bool plane)
 		{
 			for (int edge = 1; edge < 7; edge++)
 			{
-					////
+					//// 
 					wstring tmwcb1 = ReturnTableValues(0, 3, 1);
 					wstring tmwgam2 = ReturnTableValues(0, 4, 1);
 					double tmp_cb_1 = (double)_wtof(tmwcb1.c_str());
