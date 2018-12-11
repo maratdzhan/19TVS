@@ -1,0 +1,14 @@
+D:\Vasiliev\PERMAK-A\Local_new\            
+PROJ                                    
+01                                      
+2            
+permVAS_res_i1.out  
+-999                                    
+&DAN                                    
+IPER=1                   
+IGOM=0                                  
+TKK=10000                              
+NTBC=-1                                 
+IPRINT=0                               
+PSITEF=-999                             
+&END                                    
