@@ -23,6 +23,7 @@ vector<double> mcu_kq_extract;
 
 void SotvLinkMcu()
 {
+	LoggerClass lg_2(__FUNCTION__);
 	ifstream SotvMcuFile(Path_Finder("PermakPath") + add_path_gmr + "Nt/mcu_permak_sotv.txt");
 	string strSotv;
 	int tvel = 0;

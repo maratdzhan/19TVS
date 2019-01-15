@@ -490,6 +490,7 @@ void GetCalculateDiscrepancy()
 
 void GetStateName(int gln)
 {
+	LoggerClass lg_1(__FUNCTION__);
 	string nn1 = Path_Finder("PermakPath") + "bin/data/tests/tests_description/Param.txt";
 	ifstream stNameFile(nn1);
 	nn1.clear();

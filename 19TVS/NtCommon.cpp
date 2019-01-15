@@ -3,6 +3,7 @@
 #include "NtCommon.h"
 #include "ToUpperFunct.h"
 #include "Path_Finder.h"
+#include "Error.h"
 
 #include <string>
 #include <vector>
@@ -93,6 +94,7 @@ void CreateMainPath()
 
 string ReturnMainPath(string inputString)
 {
+	LoggerClass lg_1(__FUNCTION__);
 	string result = ToUpperFunc(inputString);
 
 	return mainPath[result];

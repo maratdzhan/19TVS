@@ -19,6 +19,7 @@ int sl_l[MAX_ARRAY_SIZE+1][INLINE_SIZE+1];
 void slRead()
 {
 	// «апускаетс€ один раз при запуске приложени€
+	LoggerClass lg_2(__FUNCTION__);
 	string path_si = ReturnMainPath("slink");
 	string str; 
 	ifstream ifs(path_si);
@@ -45,6 +46,7 @@ void slRead()
 
 int ndMaking(int inputNumber, int retParam)
 {
+	LoggerClass lg_2(__FUNCTION__);
 	// ¬озвращает параметр retparam
 	// из списка sl.ink
 	// считанного в slread()
@@ -54,17 +56,20 @@ int ndMaking(int inputNumber, int retParam)
 
 		for (int i = 0; i != MAX_ARRAY_SIZE; i++)
 		{
-			if (inputNumber==sl_l[i][1]) 
+			if (inputNumber == sl_l[i][1])
+			{
 				return  sl_l[i][retParam];
+			}
 		}
 		// /* это дерьмо-код нужен дл€ того, чтобы записи типа 10,15,6,1 не игнорировались
 		for (int i = 0; i != MAX_ARRAY_SIZE; i++)
 		{
 			if (inputNumber == sl_l[i][2])
+			{
 				return  sl_l[i][retParam];
+			}
 		}
 	}
-		
 	
 	return -123;
 }
@@ -93,6 +98,7 @@ string RetWithOutLastSym(string str, char(c))
 
 void ndWritting(int inpNumber)
 {
+	LoggerClass lg_2(__FUNCTION__);
 	// «апись в корень нужного файла NEWDATA
 	string path_si;
 	string tmpStr;

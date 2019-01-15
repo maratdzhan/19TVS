@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "Error.h"
 #include "19TVS.h"
 #include "SessionInfo.h"
 #include "Path_Finder.h"
@@ -57,6 +58,8 @@ void ClearingFunction();
 
 int GetSessionInfo(HWND hWnd_1)
 {
+	LoggerClass lg(__FUNCTION__);
+
 	string s;
 	
 	int ndNumber = 0;
@@ -177,8 +180,8 @@ int GetSessionInfo(HWND hWnd_1)
 	s.clear();
 	FakeTvelDef(true);
 	ClearingFunction();
+
 	MessageBox(NULL,L"Расчет окончен",L"Информация",MB_ICONINFORMATION|MB_OK);
-	// Я не хочу вручную закрывать окно, нужен таймер, который закроет это окно
 
 	return 0;
 }

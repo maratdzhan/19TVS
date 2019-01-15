@@ -259,6 +259,7 @@ void GrabCoordinates()
 
 void FirstLaunchNumeration()
 {
+	LoggerClass lg_2(__FUNCTION__);
 	for (auto i = 0; i < FA_COUNT; i++)
 	{
 
@@ -366,6 +367,7 @@ int ElemSumma(int i)
 
 void FakeTvelDef(bool clearing)
 {
+	LoggerClass lg_2(__FUNCTION__);
 	if (!clearing)
 	{
 		verticalSync.push_back(0);

@@ -520,6 +520,7 @@ void GetWritePlane()
 
 void GetGapSize(int gln,int gsn)
 {
+	LoggerClass lg_2(__FUNCTION__);
 	x_coord.push_back(0);
 	y_coord.push_back(0);
 	//gap_size.push_back(0);
@@ -527,7 +528,7 @@ void GetGapSize(int gln,int gsn)
 	GetCoord(gsn);
 	GetGapSize(); // Внутри переход к dX
 	GetCornerSize();
-	bool use_eG = true;
+	bool use_eG = false;
 	// Расчет с dX
 
 	if (use_eG)
@@ -552,6 +553,7 @@ void GetGapSize(int gln,int gsn)
 
 void DefineKinf(short cycleNumber, short timeNumber)
 {
+	LoggerClass lg_1(__FUNCTION__);
 	// Тут считываем Kinf из файла KinfCycles. Он имеет вид AssemblyKinf,CyclyNum
 	// Таким образом мы имеем набор параметров, где каждый элемент соответствует номеру ТВС.
 	ifstream KinfFile(Path_Finder("PermakPath") + "bin/data/tests/KinfCycles.txt"); 
