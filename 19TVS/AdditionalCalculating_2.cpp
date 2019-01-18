@@ -180,6 +180,7 @@ void Processing()
 
 void Writting1209()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	Processing();
 	SYSTEMTIME st;
 	GetLocalTime(&st);

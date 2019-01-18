@@ -109,6 +109,7 @@ bool tParam;
 
 void StartFunction(int inputStateNumber)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	mcu_kk.push_back(0);
 	mcu_kq.push_back(0);
 	mcu_kr.push_back(0);
@@ -128,6 +129,7 @@ void StartFunction(int inputStateNumber)
 
 void ClearFunction()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	mcu_res_kk_file.clear();
 	mcu_res_kq_file.clear();
 	mcu_res_kr_file.clear();
@@ -149,6 +151,7 @@ void ClearFunction()
 
 void GetKK(int tvs)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	permak_res_kk_file += tmp_string_p;
 	permak_res_kk_file += "kk_N_";
 	permak_res_kk_file += to_string(tvs);
@@ -199,6 +202,7 @@ void GetKK(int tvs)
 
 void GetKQ(int tvs,bool tParam)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	if (tParam)
 	{
 		permak_res_kq_file += tmp_string_p;
@@ -250,6 +254,7 @@ void GetKQ(int tvs,bool tParam)
 
 void GetKR(int tvs)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	for (int tvel = 1; tvel < CELL_NUMBER+1; tvel++)
 	{
 		permak_kr.push_back((permak_kk[tvel] * permak_kq[tvs]));
@@ -259,6 +264,7 @@ void GetKR(int tvs)
 
 void GetDeltaKK(int tvs)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	delta_res_kr_file = tmp_string_m + "delta_" + to_string(tvs) + ".txt";
 	for (int tvel = 1; tvel < CELL_NUMBER + 1; tvel++)
 	{
@@ -274,6 +280,7 @@ void GetDeltaKK(int tvs)
 
 void WriteResultDelta(int tvs)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	permak_res_kr_file = tmp_string_p;
 	mcu_res_kr_file = tmp_string_m;
 
@@ -332,6 +339,7 @@ void WriteResultDelta(int tvs)
 
 void GetObservedRods()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	{
 		string desciptionDescrepancy = ResultPathForMcu("", 2);
 
@@ -448,6 +456,7 @@ void GetObservedRods()
 
 void GetKkForDiscrepancyValue()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	// Прогоняем по всем группам
 	// Если группа не пустая
 	// По всем элементам "_gtvs"
@@ -470,6 +479,7 @@ void GetKkForDiscrepancyValue()
 
 void GetCalculateDiscrepancy()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	short elementsCount = 0;
 	for (int currentGroupNumber = 0; currentGroupNumber < MAX_GROUP_NUMBER; currentGroupNumber++)
 	{
@@ -535,6 +545,7 @@ void GetStateName(int gln)
 
 void WriteDiscrepancyResult()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	string openFilePath;
 	int startNum = 0, lastNum = 6;
 	for (int i = 1; i < 6; i++)
@@ -556,6 +567,7 @@ void WriteDiscrepancyResult()
 
 double ReturnKinf(int edge)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	if (edge == 0)
 		return 3.33;
 	if ((edge == 1) || (edge == 3) || (edge == 5))
@@ -568,7 +580,7 @@ double ReturnKinf(int edge)
 
 void GetTable(int gln_c)
 {
-
+	LoggerClass Lg_2_1(__FUNCTION__);
 	wstring tmwcb1 = ReturnTableValues(0, 3, 1);
 	wstring tmwgam2 = ReturnTableValues(0, 4, 1);
 	double tmp_cb_1 = (double)_wtof(tmwcb1.c_str());
@@ -604,6 +616,7 @@ void GetTable(int gln_c)
 
 void KrCalculatings(int inputStatenumber)
 {
+	LoggerClass KR_CALC(__FUNCTION__);
 	tParam = true;
 	for (tvs_mod = 1; tvs_mod < COUNTED_FA + 1; tvs_mod++)
 	{
@@ -639,6 +652,7 @@ void KrCalculatings(int inputStatenumber)
 
 wstring ReturnTableValues(bool header,int paramNumber, int tvs)
 {
+
 	tvs = tvs - 1;
 	string resultStr;
 	int edge = paramNumber - 5;

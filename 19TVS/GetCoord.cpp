@@ -164,6 +164,7 @@ vector<double> Kinf;
 
 void GetCoord(int gsn)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	int maxNumber = (int)RetCoordinates(0, true, gsn);
 
 	int currentNumber = ndMaking(gl_c_n,3);
@@ -179,6 +180,7 @@ void GetCoord(int gsn)
 
 void GetGapSize()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	try
 	{
 	for (int num = 1; num < 20; num++)
@@ -217,6 +219,7 @@ void GetGapSize()
 
 void WriteDescGap(int _gln)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	ofstream wgs(Path_Finder("DESC") + to_string(_gln) + "_Gaps.txt");
 	for (int num = 1; num < 20; num++)
 	{
@@ -333,6 +336,7 @@ double GetCorrectionFactor(double cb, double gam, double ro5, double gs, bool pl
 
 void GetModifierCoefficient(bool plane)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	if (plane)
 	{
 		for (int num = 1; num < 20; num++)
@@ -394,6 +398,7 @@ void GetModifierCoefficient(bool plane)
 
 void GetRoundPlane()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	for (int num = 1; num < 20; num++)
 	{
 		for (int edge = 1; edge < 7; edge++)
@@ -428,7 +433,7 @@ void GetRoundPlane()
 
 void GetRoundCorner()
 {
-
+	LoggerClass Lg_2_1(__FUNCTION__);
 	for (int num = 1; num < CORNER_COUNT; num++)
 	{
 		if (gap_size_c[num] >= MAX_CONST_PLANE_VALUE/100.)
@@ -468,6 +473,7 @@ void GetRoundCorner()
 
 void GetCornerSize()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	try
 	{
 		for (int num = 1; num < CORNER_COUNT; num++)
@@ -484,6 +490,7 @@ void GetCornerSize()
 
 void GetWritePlane()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	string path_to_tmp_plane_container = Path_Finder("PermakPath") + "bin/ttmt/ttnt/tmp_gap.tmp";
 	ofstream ofStream(path_to_tmp_plane_container);
 

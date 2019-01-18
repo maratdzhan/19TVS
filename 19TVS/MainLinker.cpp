@@ -200,6 +200,7 @@ int TextStrFunc(string inputLine, string num)
 
 int PermparMaking()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	ifstream permparInp(path + permparFile);
 	ofstream permparOutp(permparDir);
 
@@ -279,6 +280,7 @@ int PermparMaking()
 
 void MatrixForming()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	ofstream OutputFile(OutputFileName);
 
 	for (unsigned short i = 0; i != matrix.size(); i++)
@@ -291,6 +293,7 @@ void MatrixForming()
 
 void MatrixFilling()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	ifstream InputFile(path + InputFileName);
 	
 	string inputTextString,resultString;
@@ -415,6 +418,7 @@ void MatrixFilling()
 
 void WrittingFunc()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	MatrixFilling();
 	if (complexity)
 	{
@@ -425,7 +429,6 @@ void WrittingFunc()
 
 void History(string conName)
 {
-
 	int myMatrixCount = 0;
 	bool tFind = false;
 
@@ -519,6 +522,7 @@ void StructWork(string Str1, int param)
 
 void Reset()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	newStr_1.clear();
 	numHistory.clear();
 	strHistory.clear();
@@ -557,6 +561,7 @@ void Reset()
 
 int ReadingInputData(int gln)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	ParametersFile = path + "bin/data/tests/MXParamSost/" + "MX_Param_" + to_string(gln) + ".dat";
 	ifstream Inp_MX(ParametersFile);
 	string rid, st1;
@@ -631,7 +636,7 @@ int ReadingInputData(int gln)
 
 int FormatInputData(int calcNumStr)
 {
-
+	LoggerClass Lg_2_1(__FUNCTION__);
 	// Добавить ALREADYEXISTS для внутренних элементов массива;
 	// Сейчас fill_file дописывает, не удаляя ничего лишнего.
 	ParametersFile = path + "bin/data/tests/MXParamSost/" + "MX_Param_" + to_string(calcNumStr) + ".dat";
@@ -748,6 +753,7 @@ int FormatInputData(int calcNumStr)
 
 void FillMxFile(int gln)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	ParametersFile = path + "bin/data/tests/MXParamSost/" + "MX_Param_" + to_string(gln) + ".dat";
 	string ParametersFile_w = ParametersFile;
 	ifstream MxFile(ParametersFile);
@@ -787,6 +793,7 @@ void FillMxFile(int gln)
 
 int GetParameters(int gln)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	int err = 0;
 	
 	err += FormatInputData(gln);
@@ -798,7 +805,7 @@ int GetParameters(int gln)
 
 int MainLinker(int gln, bool main, unsigned short item)
 {
-
+	LoggerClass lg_3(__FUNCTION__);
 	Reset();
 	position = item+1;
 	complexity = main;
@@ -822,6 +829,7 @@ int MainLinker(int gln, bool main, unsigned short item)
 
 void ClearLinkerFunction()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	ntMxMain.clear();
 	topStr_num.clear();
 	GXStr_num.clear();

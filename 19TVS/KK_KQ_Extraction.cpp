@@ -83,6 +83,7 @@ TVSnt ntCore[NUMBER_OF_FA + 1];
 
 void Sort()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	string PP = Path_Finder("PermakPath");
 	string a = PP + pData + "tmp-1.TXT";
 	ifstream theirMX(a);
@@ -118,7 +119,7 @@ void Sort()
 
 int checkPath(int err)
 {
-
+	LoggerClass Lg_2_1(__FUNCTION__);
 	string PP = Path_Finder("PermakPath");
 	string path = Path_Finder("PermakPath") + pTtmt +"perm_"+ to_string(gln_Local) + ".out";
 
@@ -161,7 +162,7 @@ int checkPath(int err)
 
 void DefineKK()
 {
-
+	LoggerClass Lg_2_1(__FUNCTION__);
 	string path = Path_Finder("PermakPath") + pTtmt + "perm_" + to_string(gln_Local) + ".out";
 	ifstream four(path);
 	string s;
@@ -180,6 +181,7 @@ void DefineKK()
 
 void Assigment()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	int l = 1;
 	if (inputTypeSQL)
 	{
@@ -204,7 +206,7 @@ void Assigment()
 
 void KkAssigment()
 {
-
+	LoggerClass Lg_2_1(__FUNCTION__);
 	map<int, int> tempor;
 	if (inputTypeSQL)
 	{
@@ -257,6 +259,7 @@ void KkAssigment()
 
 double Calculating(int tvs)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	double summa = 0;
 	int type = 0;
 	bool err = false;
@@ -307,6 +310,8 @@ double Calculating(int tvs)
 
 int KK_KQ_Extracting(int gln_l)
 {
+
+	LoggerClass lg_Ex_1(__FUNCTION__);
 	number.clear();
 	thnumber.clear();
 	number.clear();
@@ -409,6 +414,7 @@ int KK_KQ_Extracting(int gln_l)
 
 void GetMaxDeviations(short tvs)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	// Это путь к файлу, в который будем писать - общий и текущий
 	string localMaxDeviationsPath = Path_Finder("PermakPath") + pRes + "/commonDevs.txt";
 	string localCurrentMaxDeviationsPath = Path_Finder("PermakPath") + pRes + to_string(gln_Local) + "/" + "current.txt";
@@ -472,6 +478,7 @@ void GetMcuKkValues(short tvs, short tvel, double value)
 
 void ClearPermakERs()
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	number.clear();
 	thnumber.clear();
 	number.clear();

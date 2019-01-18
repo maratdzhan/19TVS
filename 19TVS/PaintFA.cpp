@@ -333,6 +333,7 @@ LRESULT CALLBACK WndGraph(HWND hGraph, UINT message, WPARAM wParam, LPARAM lPara
 				////////////////////////////////
 			}
 
+			LoggerClass LG_PAINTING("PAINT_331_FR_W_COLOR");
 				for (int num = 1; num < 332; num++)
 				{
 					z1 = retRowY(num);

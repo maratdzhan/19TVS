@@ -181,7 +181,7 @@ int GetSessionInfo(HWND hWnd_1)
 	FakeTvelDef(true);
 	ClearingFunction();
 
-	MessageBox(NULL,L"Расчет окончен",L"Информация",MB_ICONINFORMATION|MB_OK);
+//	MessageBox(NULL,L"Расчет окончен",L"Информация",MB_ICONINFORMATION|MB_OK);
 
 	return 0;
 }

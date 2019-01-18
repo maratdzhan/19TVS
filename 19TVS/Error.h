@@ -13,6 +13,7 @@
 void Error(const wchar_t mText[200], const wchar_t hText[50]);
 
 
+
 class LoggerClass {
 public:
 	LoggerClass(const std::string & name) {
@@ -34,12 +35,13 @@ public:
 		logFile << setw(7) << setfill(' ') << header << space;
 		logFile << setw(30) << setfill(' ') << TakeCurrentTime() << space;
 		if (isItEnd) {
-			logFile << space << setw(12) << setfill(' ') << TakeDuration(TakeFunctionName());
-			logFile << space << setw(22) << setfill(' ') << TakeFunctionName() << std::endl;
+			logFile << space << setw(15) << setfill(' ') << TakeDuration(TakeFunctionName());
+			logFile << space << setw(30) << setfill(' ') << TakeFunctionName() <<
+				setw(10) << setfill(' ') << std::endl;
 		}
 		else
 		{
-			logFile << space << setw(35) << setfill(' ') << TakeFunctionName() << std::endl;
+			logFile << space << setw(46) << setfill(' ') << TakeFunctionName() << std::endl;
 		}
 
 
@@ -51,9 +53,14 @@ public:
 		SYSTEMTIME st;
 		GetLocalTime(&st);
 
-		std::string date = std::to_string(st.wYear) + "-" + std::to_string(st.wMonth) + "-" +
-			std::to_string(st.wDay) + " " + std::to_string(st.wHour) + ":" + std::to_string(st.wMinute)
-			+ ":" + std::to_string(st.wSecond) + "." + std::to_string(st.wMilliseconds);
+		std::string date =
+			std::to_string(st.wYear) + "-"
+			+ std::to_string(st.wMonth) + "-"
+			+ std::to_string(st.wDay) + " "
+			+ std::to_string(st.wHour) + ":"
+			+ std::to_string(st.wMinute) + ":"
+			+ std::to_string(st.wSecond) + "."
+			+ std::to_string(st.wMilliseconds);
 		return date;
 	}
 

@@ -43,6 +43,7 @@ string st1 = "mcu/";
 
 void GetOrder(int tvs) noexcept
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	////////////////// temporary
 	double centerMaxVal = -101;
 	double cornerMaxVal = -101;
@@ -86,7 +87,7 @@ void GetOrder(int tvs) noexcept
 
 string GetGraphVal(int tvs, int stringNum)
 {
-
+	LoggerClass Lg_2_1(__FUNCTION__);
 		tmp_str_graph = ResultPathForMcu("",2);
 		global_str1 = ResultPathForMcu("",2) + st1;
 		global_str2 = tmp_str_graph + st2;
@@ -254,6 +255,7 @@ double GetKQDelta(int tvs_Number)//(double valM, double valS) // val_Master, val
 
 double ReturnOrder(int mainVal, bool max)
 {
+
 	if (max)
 	{
 		if (mainVal == 1)

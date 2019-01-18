@@ -18,6 +18,7 @@ double keff;
 
 void GetKeff(string keffStr, bool needThis)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	bool localBoolean = false;
 	string localKeff;
 
@@ -57,6 +58,7 @@ void GetKeff(string keffStr, bool needThis)
 
 void ExtractingResultFile(int sostNumber, int gln_l)
 {
+	LoggerClass lg_2(__FUNCTION__);
 	string ResultFilePath = Path_Finder("ResultFilePath");
 
 	ifstream InFile(ResultFilePath);

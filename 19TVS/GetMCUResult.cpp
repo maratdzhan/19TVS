@@ -42,11 +42,13 @@ void SotvLinkMcu()
 
 int ReturnMcuNumber(int tvel)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	return mcu_sotv_list[tvel];
 }
 
 void GetMcuInfo(int gln)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	// получаем номер расчета
 	// и номер твс
 	path_gmr = Path_Finder("PermakPath") + add_path_gmr+ "tests/atests/s";
@@ -168,6 +170,7 @@ void GetMcuInfo(int gln)
 
 void GetMcuKeff(int gln)
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	string path_keff_mcu= path_gmr = Path_Finder("PermakPath") + "bin/data/tests/atests/mcu.keff";
 	ifstream MKeff(path_keff_mcu);
 	string keffReading;
@@ -197,6 +200,7 @@ double CalculatingSensCoeff(double firstval, double secondval, int tvs, int tvel
 
 void ExtraditionMcuResult(int gln, string path_for_mcu) 
 {
+	LoggerClass Lg_2_1(__FUNCTION__);
 	string ofFile;
 	for (int i = 1; i < 8; i++)
 	{
@@ -226,6 +230,7 @@ void ExtraditionMcuResult(int gln, string path_for_mcu)
 
 void GetMcuResult(int gln, string ptmcu)
 {
+	LoggerClass getMcuRes(__FUNCTION__);
 	GetMcuInfo(gln);
 	ExtraditionMcuResult(gln,ptmcu);
 	GetMcuKeff(gln);
