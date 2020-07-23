@@ -53,6 +53,7 @@ int ndMaking(int inputNumber, int retParam)
 	if ((inputNumber <= MAX_ARRAY_SIZE) && (retParam <= INLINE_SIZE))
 	{
 		// Тут косяк - если номер сост больше 500 - происходит ретурн -123
+		// не удивительно, такой говнокод писать-то
 
 		for (int i = 0; i != MAX_ARRAY_SIZE; i++)
 		{
@@ -61,7 +62,7 @@ int ndMaking(int inputNumber, int retParam)
 				return  sl_l[i][retParam];
 			}
 		}
-		// /* это дерьмо-код нужен для того, чтобы записи типа 10,15,6,1 не игнорировались
+		// /* этот дерьмо-код нужен для того, чтобы записи типа 10,15,6,1 не игнорировались
 		for (int i = 0; i != MAX_ARRAY_SIZE; i++)
 		{
 			if (inputNumber == sl_l[i][2])

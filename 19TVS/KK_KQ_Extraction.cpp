@@ -226,11 +226,12 @@ void KkAssigment()
 				// OLD METHOD */
 
 
-				if ((tvs != 8) && (tvs != 10) && (tvs != 12) && (tvs != 14) && (tvs != 16) && (tvs != 18))
-					ntCore[tvs].kk[FRNumber(1, tvel,3)] = kk[FRNumber(tvs, tvel,2)];
+				if ((tvs != 8) && (tvs != 10) && (tvs != 12) && (tvs != 14) && (tvs != 16) && (tvs != 18)) {
+					double kk_val = kk[FRNumber(tvs, tvel, 2)];
+					ntCore[tvs].kk[FRNumber(1, tvel, 3)] = kk_val;
+				}
 				else
-				{
-						
+				{	
 					if ((tvs != 10) && (tvs != 16))
 					{
 						if (FRNumber(tvs,tvel,2)!=0)

@@ -356,8 +356,10 @@ LRESULT CALLBACK WndGraph(HWND hGraph, UINT message, WPARAM wParam, LPARAM lPara
 					
 					SetTextColor(hdc, 0);
 					SetBkMode(hdc, TRANSPARENT);
-					newFont = CreateFont(11, 0, 0, 0, 0, 0, 0, 0, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE, _T("Arial"));
+					newFont = CreateFont(11, 0, 0, 0, 600, 0, 0, 0, DEFAULT_CHARSET, OUT_OUTLINE_PRECIS, CLIP_STROKE_PRECIS, 
+						CLEARTYPE_QUALITY, DEFAULT_PITCH | FF_MODERN, _T("Arial"));
 					oldFont = (HFONT)SelectObject(hdc, newFont);
+					// Вывод мощности твэла
 					s1 = GetGraphInfo(num, 1);
 					str1 = wstring(s1.begin(), s1.end());
 					TextOut(hdc, -x1+5 , (-(y2)+1) , str1.data(), str1.size());
@@ -365,7 +367,8 @@ LRESULT CALLBACK WndGraph(HWND hGraph, UINT message, WPARAM wParam, LPARAM lPara
 					//// Вторая штука 
 					
 					str2 = wstring(s2.begin(), s2.end());
-					TextOut(hdc, -x1+5 , -y2+9 , str2.data(), str2.size());
+// old				TextOut(hdc, -x1+5 , -y2+9 , str2.data(), str2.size());
+/* new */			TextOut(hdc, -x1+5, -y2+9, str2.data(), str2.size());
 					SelectObject(hdc, oldFont);
 					DeleteObject(newFont);
 					////

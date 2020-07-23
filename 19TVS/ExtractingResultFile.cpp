@@ -82,8 +82,10 @@ void ExtractingResultFile(int sostNumber, int gln_l)
 				else
 					GetKeff(str, true);
 			}
-			if (str.find("Kk NORMALIZED") != -1) num++;
-			if (num == sostNumber) break;
+			if (str.find("Kk NORMALIZED") != -1) 
+				num++;
+			if (num == sostNumber) 
+				break;
 		}
 
 		if (num == sostNumber)

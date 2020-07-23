@@ -535,7 +535,7 @@ void GetGapSize(int gln,int gsn)
 	GetCoord(gsn);
 	GetGapSize(); // Внутри переход к dX
 	GetCornerSize();
-	bool use_eG = false;
+	bool use_eG =true;
 	// Расчет с dX
 
 	if (use_eG)

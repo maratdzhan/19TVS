@@ -66,6 +66,10 @@ int GetSessionInfo(HWND hWnd_1)
 	int gsNumber = 0;
 	int cycle = 0;
 	short complexity = false;
+	// #### WARNING ####
+	// ¬ SLT.IFS можно через зап€тую указывать состо€ни€, которые предшествуют текущему. 
+	// “огда в моменте будет осуществл€тьс€ перегрузка 
+	// “о есть запись 85,1,84 означает, что что-то будет братьс€ из 84 состо€ни€
 	s = ReturnMainPath("sltifs"); 
 
 

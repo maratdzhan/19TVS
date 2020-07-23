@@ -74,7 +74,7 @@ public:
 	int TakeDuration(const std::string & name)
 	{
 		auto finish_time = std::chrono::steady_clock::now();
-		return(std::chrono::duration_cast<std::chrono::milliseconds>(finish_time - m_seTime[name]).count());
+		return static_cast<int>(std::chrono::duration_cast<std::chrono::milliseconds>(finish_time - m_seTime[name]).count());
 	}
 
 	std::string TakeFunctionName() const
